@@ -4,6 +4,12 @@
   <img src="apps/player/assets/branding/logo.png" alt="LyraNest Community Logo" width="150" />
 </p>
 
+<p align="center">
+  <a href="https://github.com/WHWgogogo/LyraNest-Community/releases/latest"><img src="https://img.shields.io/github/v/release/WHWgogogo/LyraNest-Community?display_name=tag&label=Release" alt="Latest Release" /></a>
+  <a href="https://github.com/WHWgogogo/LyraNest-Community/releases/latest"><img src="https://img.shields.io/badge/Platform-Android%20%7C%20Windows-4f46e5" alt="Platforms" /></a>
+  <a href="https://github.com/WHWgogogo/LyraNest-Community/releases/latest/download/docker-compose.yml"><img src="https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white" alt="Docker Compose" /></a>
+</p>
+
 <p align="center">一套轻量、自托管、跨平台的个人音乐库服务。</p>
 
 <p align="center">

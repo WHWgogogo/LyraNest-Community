@@ -1,7 +1,7 @@
 services:
   lyranest-community-server:
     build:
-      # Community edition server source directory.
+      # 社区版服务端源码目录。
       context: "${SERVER_BUILD_CONTEXT:-./server}"
       dockerfile: "${SERVER_DOCKERFILE:-Dockerfile}"
     image: lyranest-community-server:${SERVER_IMAGE_TAG:-1.0.1}
@@ -10,25 +10,25 @@ services:
     mem_limit: "${SERVER_MEMORY_LIMIT:-256m}"
     mem_reservation: "${SERVER_MEMORY_RESERVATION:-128m}"
     environment:
-      # Container listen address. Usually no need to change.
+      # 容器内部监听地址，通常无需修改。
       SERVER_ADDR: ":8080"
-      # Paths inside the container. Change host paths in volumes below instead.
+      # 容器内路径。请在下方 volumes 中修改主机路径。
       MUSIC_LIBRARY_DIR: /music
       MUSIC_DATA_DIR: /data
-      # Go runtime memory tuning for small NAS/VM deployments.
+      # 小型 NAS / 虚拟机部署时的 Go 运行时内存调优。
       GOMEMLIMIT: "${GOMEMLIMIT:-192MiB}"
       GOGC: "${GOGC:-100}"
       LOG_LEVEL: "${LOG_LEVEL:-info}"
       SHUTDOWN_TIMEOUT: "${SHUTDOWN_TIMEOUT:-10s}"
       AUTH_SESSION_TTL: "${AUTH_SESSION_TTL:-24h}"
     ports:
-      # Change SERVER_PORT to expose another host port, for example 18080:8080.
+      # 修改 SERVER_PORT 可映射其他主机端口，例如 18080:8080。
       - "${SERVER_PORT:-8080}:8080"
     volumes:
-      # Change MUSIC_LIBRARY_HOST_DIR to your host music folder.
-      # LyraNest Community needs read access for playback and scan metadata.
+      # 修改 MUSIC_LIBRARY_HOST_DIR 为主机上的音乐目录。
+      # LyraNest Community 只需读取音乐文件来播放和扫描元数据。
       - "${MUSIC_LIBRARY_HOST_DIR:-./music}:/music:ro"
-      # DATA_DIR stores users, sessions, favorites, playlists and scan index.
+      # DATA_DIR 保存用户、会话、收藏、歌单与扫描索引。
       - "${DATA_DIR:-./data}:/data:rw"
     healthcheck:
       test: ["CMD", "/usr/local/bin/music-player-server", "healthcheck"]

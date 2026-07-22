@@ -1,0 +1,49 @@
+{
+  "year": 2026,
+  "total_listened_ms": 3500,
+  "total_plays": 3,
+  "listening_days": 1,
+  "unique_tracks": 2,
+  "unique_albums": 2,
+  "heatmap": [
+    {
+      "date": "2026-07-20",
+      "play_count": 3,
+      "listened_ms": 3500
+    }
+  ],
+  "top_tracks": [
+    {
+      "track": {
+        "id": "track-1",
+        "title": "First",
+        "artist": "Artist One",
+        "album": "Album One",
+        "genres": ["Rock"],
+        "duration_ms": 3000,
+        "file_name": "first.mp3",
+        "extension": "mp3",
+        "size_bytes": 123,
+        "modified": "2026-07-20T08:00:00Z"
+      },
+      "play_count": 2,
+      "listened_ms": 3000
+    },
+    {
+      "track": {
+        "id": "track-2",
+        "title": "Second",
+        "artist": "Artist Two",
+        "album": "Album Two",
+        "genres": ["Jazz"],
+        "duration_ms": 3000,
+        "file_name": "second.mp3",
+        "extension": "mp3",
+        "size_bytes": 123,
+        "modified": "2026-07-20T08:00:00Z"
+      },
+      "play_count": 1,
+      "listened_ms": 500
+    }
+  ]
+}

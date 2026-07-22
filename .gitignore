@@ -1,0 +1,66 @@
+# Local configuration
+.env
+.env.*
+!.env.example
+*.local
+*.token
+token.txt
+tokens.json
+
+# Runtime data
+/data/
+/cache/
+/music/
+/deploy/data/
+/deploy/cache/
+/deploy/music/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+
+# Music libraries and test media
+*.aac
+*.ape
+*.flac
+*.m4a
+*.mp3
+*.oga
+*.ogg
+*.opus
+*.wav
+*.wma
+
+# Go
+server/bin/
+server/coverage.out
+
+# Dependencies and build caches
+**/node_modules/
+**/.dart_tool/
+**/.gradle/
+**/build/
+/dist/build-cache/
+
+# Flutter / Dart
+apps/player/.flutter-plugins
+apps/player/.flutter-plugins-dependencies
+apps/player/.packages
+apps/player/windows/flutter/ephemeral/
+
+# Signing credentials
+*.jks
+*.keystore
+*.p12
+*.pfx
+apps/player/android/key.properties
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db

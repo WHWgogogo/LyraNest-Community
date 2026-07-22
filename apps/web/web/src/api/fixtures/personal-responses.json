@@ -1,0 +1,105 @@
+{
+  "collections": {
+    "revision": 7,
+    "favorite_track_ids": ["track-1"],
+    "playlists": [
+      {
+        "id": "playlist-1",
+        "name": "Morning Focus",
+        "track_ids": ["track-2"],
+        "created_at": "2026-07-20T08:00:00Z",
+        "updated_at": "2026-07-20T08:05:00Z"
+      }
+    ]
+  },
+  "event_ingest": {
+    "accepted": 3,
+    "duplicates": 0
+  },
+  "discovery": {
+    "for_you": [
+      {
+        "id": "track-1",
+        "title": "Recommended Song",
+        "artist": "Harmony",
+        "album": "Discovery",
+        "duration_ms": 185432,
+        "file_name": "recommended.flac",
+        "extension": "flac",
+        "size_bytes": 4096,
+        "modified": "2026-07-20T00:00:00Z"
+      }
+    ],
+    "daily": [
+      {
+        "id": "track-2",
+        "title": "Daily Song",
+        "file_name": "daily.mp3",
+        "extension": "mp3",
+        "size_bytes": 2048,
+        "modified": "2026-07-20T00:00:00Z"
+      }
+    ],
+    "recent_recommendations": [],
+    "hot_tracks": [
+      {
+        "track": {
+          "id": "track-1",
+          "title": "Recommended Song",
+          "artist": "Harmony",
+          "file_name": "recommended.flac",
+          "extension": "flac",
+          "size_bytes": 4096,
+          "modified": "2026-07-20T00:00:00Z"
+        },
+        "play_count": 2,
+        "listened_ms": 3000
+      }
+    ],
+    "categories": [
+      {
+        "name": "Pop",
+        "track_count": 2,
+        "tracks": [
+          {
+            "id": "track-2",
+            "title": "Daily Song",
+            "file_name": "daily.mp3",
+            "extension": "mp3",
+            "size_bytes": 2048,
+            "modified": "2026-07-20T00:00:00Z"
+          }
+        ]
+      }
+    ]
+  },
+  "report": {
+    "year": 2026,
+    "total_listened_ms": 3500,
+    "total_plays": 3,
+    "listening_days": 1,
+    "unique_tracks": 2,
+    "unique_albums": 2,
+    "heatmap": [
+      {
+        "date": "2026-07-20",
+        "play_count": 3,
+        "listened_ms": 3500
+      }
+    ],
+    "top_tracks": [
+      {
+        "track": {
+          "id": "track-1",
+          "title": "Recommended Song",
+          "file_name": "recommended.flac",
+          "extension": "flac",
+          "size_bytes": 4096,
+          "modified": "2026-07-20T00:00:00Z"
+        },
+        "play_count": 2,
+        "listened_ms": 3000
+      }
+    ]
+  }
+}

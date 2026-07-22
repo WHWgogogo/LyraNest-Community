@@ -1,0 +1,433 @@
+{
+  "@@locale": "zh",
+  "appTitle": "律巢社区版",
+  "tracksTitle": "曲目",
+  "lyricsTitle": "歌词",
+  "playerTitle": "播放器",
+  "settingsTitle": "服务器设置",
+  "serverSettingsTooltip": "服务器设置",
+  "loading": "加载中...",
+  "requestFailedTitle": "请求失败",
+  "networkRequestFailed": "网络请求失败",
+  "networkErrorWithStatusCode": "{message}（HTTP 状态码 {statusCode}）",
+  "totalTrackCount": "总曲目数：{count}",
+  "noTracksTitle": "暂无曲目",
+  "noTracksMessage": "服务器返回的曲目列表为空。",
+  "lyricsTooltip": "歌词",
+  "unknownArtist": "未知艺人",
+  "untitledTrack": "未命名曲目",
+  "noLyricsTitle": "暂无歌词",
+  "noLyricsMessage": "服务器返回的歌词内容为空。",
+  "nothingPlayingTitle": "暂无播放",
+  "nothingPlayingMessage": "请先从曲目列表选择歌曲。",
+  "noTrackSelected": "未选择曲目",
+  "selectMusicFromTracks": "从曲目列表选择音乐",
+  "play": "播放",
+  "pause": "暂停",
+  "viewLyrics": "查看歌词",
+  "serverUrlLabel": "服务器 URL",
+  "serverUrlExample": "示例：http://127.0.0.1:8080",
+  "save": "保存",
+  "connecting": "正在连接...",
+  "serverConnectionSucceeded": "连接成功",
+  "serverConnectionFailed": "无法连接到服务器：{message}",
+  "invalidServerUrl": "请输入有效的 HTTP 或 HTTPS 服务器地址。",
+  "serverHealthCheckInvalidResponse": "服务器健康检查返回了无效响应。",
+  "serverHealthCheckUnexpectedStatus": "服务器健康检查状态为“{status}”，而不是“ok”。",
+  "serverSettingsLoadFailed": "无法加载服务器设置：{message}",
+  "desktopLyricsTitle": "桌面歌词",
+  "desktopLyricsWindowsDescription": "Windows 原生透明歌词悬浮窗已可用。",
+  "desktopLyricsAndroidDescription": "授予权限后可使用 Android 系统歌词悬浮窗。",
+  "desktopLyricsUnsupportedDescription": "当前平台未定义歌词悬浮窗能力。",
+  "windowsLyricsOverlayNotImplemented": "Windows 歌词悬浮窗不可用。",
+  "androidLyricsOverlayNotImplemented": "Android 歌词悬浮窗不可用。",
+  "unsupportedLyricsOverlayNotImplemented": "当前平台无法使用歌词悬浮窗。",
+  "desktopLyricsDescription": "播放时在系统悬浮窗中显示当前歌词。",
+  "desktopLyricsLoading": "正在加载桌面歌词…",
+  "desktopLyricsNoLyrics": "当前曲目暂无歌词。",
+  "desktopLyricsUntimedLyrics": "正在桌面悬浮窗中显示未带时间标签的歌词。",
+  "desktopLyricsLyricsLoadFailed": "无法加载歌词，但播放将继续。",
+  "desktopLyricsPermissionRequired": "请授予所需权限以显示桌面歌词。",
+  "desktopLyricsRequestPermission": "授予权限",
+  "desktopLyricsCapabilityUnavailable": "无法加载桌面歌词能力：{message}",
+  "desktopLyricsSystemOverlay": "系统悬浮窗",
+  "desktopLyricsTransparentWindow": "透明窗口",
+  "desktopLyricsClickThrough": "鼠标穿透",
+  "desktopLyricsLockPosition": "锁定位置",
+  "desktopLyricsRuntimePermission": "运行时权限",
+  "capabilitySupported": "支持",
+  "capabilityNotSupported": "不支持",
+  "capabilityRequired": "需要",
+  "capabilityNotRequired": "不需要",
+  "managementTitle": "音乐管理",
+  "managementTooltip": "管理音乐库",
+  "managementDescription": "查看服务器曲库状态、重新扫描音乐目录，并刷新曲目列表。",
+  "libraryStatusTitle": "曲库状态",
+  "libraryDirectoryLabel": "音乐目录",
+  "libraryDirectoryNotConfigured": "未配置",
+  "libraryTrackCountLabel": "曲目数量",
+  "libraryScannerStatusLabel": "扫描状态",
+  "libraryScanning": "扫描中",
+  "libraryIdle": "空闲",
+  "lastScanLabel": "最后扫描",
+  "neverScanned": "尚未完成扫描",
+  "lastScanErrorTitle": "最近扫描错误",
+  "refresh": "刷新",
+  "rescanLibrary": "重新扫描音乐库",
+  "scanLibraryDescription": "扫描服务器配置的音乐目录，发现新增、更新或已移除的音频文件。",
+  "scanNow": "开始扫描",
+  "scanningLibrary": "正在扫描音乐库...",
+  "scanCompleted": "音乐库扫描完成，共 {count} 首曲目。",
+  "scanRequestFailedTitle": "扫描请求失败",
+  "scanFailed": "无法扫描音乐库：{message}",
+  "libraryStatusLoadFailedTitle": "无法读取曲库状态",
+  "libraryStatusFailed": "无法加载曲库状态：{message}",
+  "libraryStatusEndpointUnavailable": "当前服务器尚未提供曲库状态接口。",
+  "libraryScanEndpointUnavailable": "当前服务器尚未提供曲库扫描接口。",
+  "libraryScanAlreadyInProgress": "服务器正在扫描音乐库，请刷新状态后稍后重试。",
+  "scanResultTitle": "本次扫描结果",
+  "scanResultTotalTracks": "曲目总数",
+  "scanResultReturnedTracks": "返回曲目",
+  "scanResultTime": "完成时间",
+  "scrapeTitle": "匹配元数据",
+  "scrapeTooltip": "刮削元数据",
+  "scrapeProvider": "来源：{provider}",
+  "scrapeConfidence": "置信度 {percent}%",
+  "scrapeCandidatesCount": "{count} 个候选结果",
+  "scrapeReviewDifferences": "应用前请检查字段差异，并选择需要更新的字段。",
+  "scrapeCurrentValue": "当前值",
+  "scrapeCandidateValue": "候选值",
+  "scrapeNoValue": "未设置",
+  "scrapeNoDifferences": "此候选没有可应用的字段。",
+  "scrapeFieldsSelected": "已选择 {count} 个字段",
+  "applyCandidate": "应用所选字段",
+  "applyingCandidate": "正在应用...",
+  "scrapeApplySucceeded": "已从 {provider} 应用 {count} 个字段。",
+  "scrapeApplyFailed": "无法应用元数据：{message}",
+  "scrapeSelectAtLeastOneField": "请至少选择一个要应用的字段。",
+  "scrapeSearchFailedTitle": "无法获取刮削候选",
+  "scrapeEndpointUnavailable": "当前服务器尚未提供元数据刮削接口。",
+  "retry": "重试",
+  "searchAgain": "重新搜索",
+  "noScrapeCandidatesTitle": "没有找到合适候选",
+  "noScrapeCandidatesMessage": "可以完善文件名或内嵌标签后再次搜索。",
+  "scrapeFieldTitle": "标题",
+  "scrapeFieldArtist": "艺术家",
+  "scrapeFieldAlbum": "专辑",
+  "scrapeFieldAlbumArtist": "专辑艺术家",
+  "scrapeFieldYear": "年份",
+  "scrapeFieldTrackNumber": "音轨号",
+  "scrapeFieldDiscNumber": "碟片号",
+  "scrapeFieldGenre": "流派",
+  "scrapeFieldArtwork": "封面",
+  "scrapeFieldLyrics": "歌词",
+  "all": "全部",
+  "allTracks": "全部曲目",
+  "downloadedTracks": "下载",
+  "albums": "专辑",
+  "artists": "艺术家",
+  "playlists": "歌单",
+  "searchTracksArtistsAlbums": "搜索曲目、歌手或专辑",
+  "library": "媒体库",
+  "favorites": "收藏",
+  "sortTracks": "排序",
+  "sortByTitle": "歌曲名",
+  "sortByArtist": "艺术家",
+  "sortByAlbum": "专辑",
+  "sortAscending": "升序",
+  "sortDescending": "降序",
+  "selectedTracks": "已选 {count} 首",
+  "@selectedTracks": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "2"
+      }
+    }
+  },
+  "selectionSummary": "{total} 首歌曲 · 已选 {selected} 首",
+  "@selectionSummary": {
+    "placeholders": {
+      "total": {
+        "type": "int",
+        "example": "12"
+      },
+      "selected": {
+        "type": "int",
+        "example": "2"
+      }
+    }
+  },
+  "exitSelection": "退出选择",
+  "selectAll": "全选",
+  "downloadSelectedTracks": "下载所选歌曲",
+  "download": "下载",
+  "noDownloadedTracks": "暂无已下载歌曲",
+  "noDownloadedTracksMessage": "已下载的歌曲会显示在这里。",
+  "deleteDownloadedTrack": "删除本地下载",
+  "deleteDownloadedTrackTitle": "删除本地下载？",
+  "deleteDownloadedTrackPrompt": "要删除“{title}”的本地下载吗？之后可以重新下载。",
+  "@deleteDownloadedTrackPrompt": {
+    "placeholders": {
+      "title": {
+        "type": "String",
+        "example": "夜曲"
+      }
+    }
+  },
+  "deleteDownloadedTrackFailed": "无法删除本地下载。",
+  "moreOptions": "更多操作",
+  "playNow": "现在播放",
+  "playNext": "下一首播放",
+  "addToQueue": "加入队列",
+  "queue": "播放队列",
+  "showQueue": "显示队列",
+  "hideQueue": "隐藏队列",
+  "clearQueue": "清空队列",
+  "removeFromQueue": "从队列移除",
+  "emptyQueueMessage": "播放队列还是空的。",
+  "yourLibrary": "你的媒体库",
+  "favoritesFirst": "收藏曲目优先显示",
+  "addToPlaylist": "加入歌单",
+  "viewAlbum": "查看专辑",
+  "viewArtist": "查看艺术家",
+  "songInformation": "歌曲信息",
+  "addFavorite": "收藏",
+  "removeFavorite": "取消收藏",
+  "newPlaylist": "新建歌单",
+  "playlistName": "歌单名称",
+  "create": "创建",
+  "noPlaylists": "还没有自定义歌单。",
+  "noPlaylistTracks": "这个歌单中还没有可播放的曲目。",
+  "noAlbums": "还没有带专辑信息的曲目。",
+  "noArtists": "还没有带艺术家信息的曲目。",
+  "noTracksInAlbum": "这个专辑中没有可播放的曲目。",
+  "noTracksByArtist": "这个艺术家没有可播放的曲目。",
+  "noMatchingTracks": "没有匹配的曲目",
+  "noFavorites": "暂无收藏",
+  "noFavoritesMessage": "收藏的曲目会显示在这里。",
+  "tryAnotherSearch": "试试其他关键词，或关闭收藏筛选。",
+  "playPlaylist": "播放歌单",
+  "playAlbum": "播放专辑",
+  "playArtist": "播放艺术家",
+  "removeFromPlaylist": "从歌单移除",
+  "deletePlaylist": "删除歌单",
+  "deletePlaylistPrompt": "确定要删除这个歌单吗？歌曲不会被删除。",
+  "cancel": "取消",
+  "delete": "删除",
+  "unknownAlbum": "未知专辑",
+  "trackInfoTitle": "标题",
+  "trackInfoArtist": "艺术家",
+  "trackInfoAlbum": "专辑",
+  "trackInfoGenre": "流派",
+  "trackInfoDuration": "时长",
+  "trackInfoIdentifier": "曲目 ID",
+  "queuedNext": "已设为下一首播放。",
+  "addedToQueue": "已加入播放队列。",
+  "alreadyPlaying": "这首歌正在播放。",
+  "alreadyInQueue": "这首歌已在播放队列中。",
+  "playlistUpdateFailed": "无法更新歌单或收藏。",
+  "trackAddedToPlaylist": "已添加到歌单。",
+  "trackAlreadyInPlaylist": "这首歌已在该歌单中。",
+  "batchOperationCompleted": "已完成：{succeeded}/{total}",
+  "@batchOperationCompleted": {
+    "placeholders": {
+      "succeeded": {
+        "type": "int",
+        "example": "2"
+      },
+      "total": {
+        "type": "int",
+        "example": "3"
+      }
+    }
+  },
+  "batchDownloadQueued": "已加入下载队列：{succeeded}/{total}",
+  "@batchDownloadQueued": {
+    "placeholders": {
+      "succeeded": {
+        "type": "int",
+        "example": "2"
+      },
+      "total": {
+        "type": "int",
+        "example": "3"
+      }
+    }
+  },
+  "batchSkipped": "，跳过 {count} 首",
+  "@batchSkipped": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "batchFailed": "，失败 {count} 首",
+  "@batchFailed": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "trackCount": "{count} 首歌曲",
+  "albumCount": "{count} 张专辑",
+  "queueSummary": "{count} 首歌曲 · 拖动可排序",
+  "nowPlaying": "正在播放",
+  "yourSpace": "我的空间",
+  "collections": "收藏与歌单",
+  "previous": "上一首",
+  "next": "下一首",
+  "yourCollection": "我的收藏",
+  "favoriteTracksCount": "已收藏 {count} 首歌曲",
+  "favoriteCollectionEmptyMessage": "收藏曲目以创建你的收藏集。",
+  "playCollection": "播放收藏集",
+  "playbackModeSequential": "顺序播放",
+  "playbackModeRepeatAll": "列表循环",
+  "playbackModeRepeatOne": "单曲循环",
+  "playbackModeShuffle": "随机播放",
+  "sleepTimerTitle": "睡眠定时",
+  "sleepTimerTooltip": "睡眠定时器",
+  "sleepTimerActiveTooltip": "睡眠定时器已启用",
+  "sleepTimerRemaining": "剩余 {time}",
+  "sleepTimerDuration": "时长",
+  "sleepTimerEndTime": "结束时间",
+  "sleepTimerDurationMinutes": "时长（分钟）",
+  "sleepTimerMinutes": "分钟",
+  "sleepTimerWhenFinished": "定时结束后",
+  "sleepTimerPauseImmediately": "立即暂停",
+  "sleepTimerPauseAfterCurrentTrack": "当前歌曲播放完后暂停",
+  "sleepTimerStart": "启动定时器",
+  "sleepTimerCancel": "取消定时器",
+  "sleepTimerInvalidDuration": "请输入大于 0 的时长。",
+  "sleepTimerSelectEndTime": "请选择结束时间。",
+  "sleepTimerWaitingForCurrentTrack": "等待当前歌曲播放完毕",
+  "navigationTracks": "曲库",
+  "navigationDiscover": "发现",
+  "navigationReport": "听歌报告",
+  "discoverTitle": "发现音乐",
+  "discoverSubtitle": "从你的曲库与听歌偏好中，找到下一首喜欢的歌。",
+  "discoverSearchHint": "搜索曲目、艺人或专辑",
+  "guessYouLike": "猜你喜欢",
+  "viewAll": "查看全部",
+  "discoverFallbackMessage": "发现内容刷新中，先为你展示曲库中的歌曲。",
+  "dailyRecommendations": "每日推荐 30 首",
+  "dailyRecommendationsSubtitle": "今天的 30 首音乐陪伴。",
+  "listeningRanking": "听歌排行",
+  "categoryPlaylists": "分类歌单",
+  "recentListeningRecommendations": "最近听歌推荐",
+  "moreRecommendedSongs": "更多推荐歌曲",
+  "noRecommendations": "曲库有歌曲后，这里会为你准备推荐内容。",
+  "noListeningRanking": "开始听歌后，这里会生成你的听歌排行。",
+  "reportTitle": "听歌报告",
+  "reportSubtitle": "{year} 年的声音回顾",
+  "@reportSubtitle": {
+    "placeholders": {
+      "year": {
+        "type": "int",
+        "example": "2026"
+      }
+    }
+  },
+  "serverConnectionFailedGeneric": "无法连接到服务器，请检查地址和网络后重试。",
+  "totalListeningTime": "总听歌时长",
+  "listeningDuration": "{hours} 小时 {minutes} 分钟",
+  "@listeningDuration": {
+    "placeholders": {
+      "hours": {
+        "type": "int",
+        "example": "48"
+      },
+      "minutes": {
+        "type": "int",
+        "example": "30"
+      }
+    }
+  },
+  "listeningTimes": "听歌次数",
+  "listeningDays": "听歌天数",
+  "songsListened": "歌曲数",
+  "albumsListened": "专辑数",
+  "listeningHeatmap": "听歌热力图",
+  "reportNoDataTitle": "报告正在等待你",
+  "reportNoDataMessage": "开始播放音乐，逐步写下你的听歌故事。",
+  "popularTracks": "热门歌曲榜",
+  "listeningPlayCount": "{count} 次播放",
+  "@listeningPlayCount": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "12"
+      }
+    }
+  },
+  "offlineDownloadsTooltip": "下载管理",
+  "loginTitle": "登录律巢",
+  "createAdminTitle": "创建管理员账户",
+  "loginDescription": "连接你的音乐服务器，进入媒体库。",
+  "createAdminDescription": "服务器尚未初始化，请注册第一个管理员账户。",
+  "authStatusCheckFailed": "无法检查服务器初始化状态：{message}",
+  "@authStatusCheckFailed": {
+    "placeholders": {
+      "message": {
+        "type": "String",
+        "example": "连接被拒绝"
+      }
+    }
+  },
+  "serverAddressLabel": "服务器地址",
+  "internalServerAddressLabel": "内网访问地址",
+  "internalServerAddressHelper": "例如：http://192.168.0.107:8080",
+  "externalServerAddressLabel": "外网访问地址（可选）",
+  "externalServerAddressHelper": "例如：https://music.example.com",
+  "serverAddressAutoSelectionHint": "律巢会快速检测两个地址，并自动使用当前网络可访问的地址。",
+  "usernameLabel": "用户名",
+  "passwordLabel": "密码",
+  "showPassword": "显示密码",
+  "hidePassword": "隐藏密码",
+  "login": "登录",
+  "registerAdministrator": "注册管理员",
+  "loginConnectionHint": "提交前，律巢会验证服务器连接和初始化状态。",
+  "appInfoTitle": "应用",
+  "aboutTitle": "关于律巢社区版",
+  "aboutSubtitle": "版本、致谢和应用信息",
+  "aboutDescription": "你的个人音乐空间。",
+  "checkForUpdates": "检查更新",
+  "checkForUpdatesDescription": "从 GitHub 查询律巢最新正式版本。",
+  "alreadyLatestVersion": "当前已经是最新版本。",
+  "updateAvailable": "发现新版本",
+  "updateAvailableDescription": "律巢 {version} 已发布。",
+  "@updateAvailableDescription": {
+    "placeholders": {
+      "version": {
+        "type": "String",
+        "example": "0.1.9"
+      }
+    }
+  },
+  "updateCheckFailed": "检查更新失败，请稍后重试。",
+  "openDownloadPage": "前往下载",
+  "projectAddress": "项目地址",
+  "authorHomepage": "作者主页",
+  "contactAuthor": "联系作者",
+  "couldNotOpenLink": "无法打开链接。",
+  "appVersion": "版本 {version}",
+  "@appVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String",
+        "example": "0.1.8"
+      }
+    }
+  },
+  "supportAuthorTitle": "支持作者",
+  "supportAuthorDescription": "如果律巢对你有所帮助，欢迎扫描下方赞赏码支持作者。",
+  "supportAuthorHint": "感谢你对律巢的支持。",
+  "exitApplicationTitle": "要退出律巢吗？",
+  "exitApplicationMessage": "你可以保留后台播放，或完全退出应用。",
+  "keepPlayingInBackground": "保留后台播放",
+  "exitApplication": "退出应用"
+}

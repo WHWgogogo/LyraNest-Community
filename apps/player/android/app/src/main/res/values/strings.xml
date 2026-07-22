@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LyraNest Community</string>
+    <string name="desktop_lyrics_notification_channel_name">Desktop lyrics</string>
+    <string name="desktop_lyrics_notification_channel_description">Shows Android floating desktop lyrics.</string>
+    <string name="desktop_lyrics_notification_title">Desktop lyrics is showing</string>
+    <string name="desktop_lyrics_notification_text">Tap to return to LyraNest Community. Drag lyrics to reposition.</string>
+    <string name="desktop_lyrics_notification_stop">Stop lyrics</string>
+    <string name="desktop_lyrics_foreground_service_type">system_alert_window_desktop_lyrics_overlay</string>
+</resources>

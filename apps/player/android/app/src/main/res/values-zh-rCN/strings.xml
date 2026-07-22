@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">律巢社区版</string>
+    <string name="desktop_lyrics_notification_channel_name">桌面歌词</string>
+    <string name="desktop_lyrics_notification_channel_description">显示 Android 桌面悬浮歌词。</string>
+    <string name="desktop_lyrics_notification_title">桌面歌词正在显示</string>
+    <string name="desktop_lyrics_notification_text">轻按返回律巢社区版，拖动歌词可调整位置。</string>
+    <string name="desktop_lyrics_notification_stop">停止歌词</string>
+</resources>

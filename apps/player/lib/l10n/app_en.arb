@@ -1,0 +1,624 @@
+{
+  "@@locale": "en",
+  "appTitle": "LyraNest Community",
+  "@appTitle": {
+    "description": "Application title."
+  },
+  "tracksTitle": "Tracks",
+  "lyricsTitle": "Lyrics",
+  "playerTitle": "Player",
+  "settingsTitle": "Server settings",
+  "serverSettingsTooltip": "Server settings",
+  "loading": "Loading...",
+  "requestFailedTitle": "Request failed",
+  "networkRequestFailed": "Network request failed",
+  "networkErrorWithStatusCode": "{message} (HTTP {statusCode})",
+  "@networkErrorWithStatusCode": {
+    "description": "Network error with an HTTP status code.",
+    "placeholders": {
+      "message": {
+        "type": "String",
+        "example": "Network request failed"
+      },
+      "statusCode": {
+        "type": "int",
+        "example": "503"
+      }
+    }
+  },
+  "totalTrackCount": "Total tracks: {count}",
+  "@totalTrackCount": {
+    "description": "Label for the total number of tracks.",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "12"
+      }
+    }
+  },
+  "noTracksTitle": "No tracks",
+  "noTracksMessage": "The server returned an empty track list.",
+  "lyricsTooltip": "Lyrics",
+  "unknownArtist": "Unknown artist",
+  "untitledTrack": "Untitled track",
+  "noLyricsTitle": "No lyrics",
+  "noLyricsMessage": "The server returned empty lyrics content.",
+  "nothingPlayingTitle": "Nothing playing",
+  "nothingPlayingMessage": "Select a song from the track list first.",
+  "noTrackSelected": "No track selected",
+  "selectMusicFromTracks": "Select music from the track list",
+  "play": "Play",
+  "pause": "Pause",
+  "viewLyrics": "View lyrics",
+  "serverUrlLabel": "Server URL",
+  "serverUrlExample": "Example: http://127.0.0.1:8080",
+  "save": "Save",
+  "connecting": "Connecting...",
+  "serverConnectionSucceeded": "Connection successful",
+  "serverConnectionFailed": "Could not connect to server: {message}",
+  "@serverConnectionFailed": {
+    "description": "Server connection error with localized details.",
+    "placeholders": {
+      "message": {
+        "type": "String",
+        "example": "Network request failed"
+      }
+    }
+  },
+  "serverConnectionFailedGeneric": "Could not connect to the server. Check the address and network, then try again.",
+  "invalidServerUrl": "Enter a valid HTTP or HTTPS server address.",
+  "serverHealthCheckInvalidResponse": "The health check returned an invalid response.",
+  "serverHealthCheckUnexpectedStatus": "The health check returned status \"{status}\" instead of \"ok\".",
+  "@serverHealthCheckUnexpectedStatus": {
+    "description": "Health check error when the server status is not ok.",
+    "placeholders": {
+      "status": {
+        "type": "String",
+        "example": "starting"
+      }
+    }
+  },
+  "serverSettingsLoadFailed": "Could not load server settings: {message}",
+  "@serverSettingsLoadFailed": {
+    "description": "Server settings loading error.",
+    "placeholders": {
+      "message": {
+        "type": "String",
+        "example": "Permission denied"
+      }
+    }
+  },
+  "desktopLyricsTitle": "Desktop lyrics",
+  "desktopLyricsWindowsDescription": "Native Windows transparent lyrics overlay is available.",
+  "desktopLyricsAndroidDescription": "Android system lyrics overlay is available after permission is granted.",
+  "desktopLyricsUnsupportedDescription": "Lyrics overlay capabilities are not defined for this platform.",
+  "windowsLyricsOverlayNotImplemented": "Windows lyrics overlay is unavailable.",
+  "androidLyricsOverlayNotImplemented": "Android lyrics overlay is unavailable.",
+  "unsupportedLyricsOverlayNotImplemented": "Lyrics overlay is unavailable on this platform.",
+  "desktopLyricsDescription": "Show the current lyric line in a system overlay while music plays.",
+  "desktopLyricsLoading": "Loading lyrics for desktop display...",
+  "desktopLyricsNoLyrics": "No lyrics are available for this track.",
+  "desktopLyricsUntimedLyrics": "Showing untimed lyrics in the desktop overlay.",
+  "desktopLyricsLyricsLoadFailed": "Could not load lyrics; playback continues.",
+  "desktopLyricsPermissionRequired": "Grant the required permission to show desktop lyrics.",
+  "desktopLyricsRequestPermission": "Grant permission",
+  "desktopLyricsCapabilityUnavailable": "Could not load desktop lyrics capabilities: {message}",
+  "@desktopLyricsCapabilityUnavailable": {
+    "description": "Desktop lyrics capability loading error.",
+    "placeholders": {
+      "message": {
+        "type": "String",
+        "example": "Platform not available"
+      }
+    }
+  },
+  "desktopLyricsSystemOverlay": "System overlay",
+  "desktopLyricsTransparentWindow": "Transparent window",
+  "desktopLyricsClickThrough": "Click-through",
+  "desktopLyricsLockPosition": "Lock position",
+  "desktopLyricsRuntimePermission": "Runtime permission",
+  "capabilitySupported": "Supported",
+  "capabilityNotSupported": "Not supported",
+  "capabilityRequired": "Required",
+  "capabilityNotRequired": "Not required",
+  "managementTitle": "Music management",
+  "managementTooltip": "Manage music library",
+  "managementDescription": "Review the server library status, rescan its music directory, and refresh the track list.",
+  "libraryStatusTitle": "Library status",
+  "libraryDirectoryLabel": "Music directory",
+  "libraryDirectoryNotConfigured": "Not configured",
+  "libraryTrackCountLabel": "Track count",
+  "libraryScannerStatusLabel": "Scanner status",
+  "libraryScanning": "Scanning",
+  "libraryIdle": "Idle",
+  "lastScanLabel": "Last scan",
+  "neverScanned": "No completed scan yet",
+  "lastScanErrorTitle": "Last scan error",
+  "refresh": "Refresh",
+  "rescanLibrary": "Rescan music library",
+  "scanLibraryDescription": "Scan the configured server directory for added, updated, or removed audio files.",
+  "scanNow": "Start scan",
+  "scanningLibrary": "Scanning library...",
+  "scanCompleted": "Library scan completed with {count} tracks.",
+  "@scanCompleted": {
+    "description": "Successful library scan message.",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "12"
+      }
+    }
+  },
+  "scanRequestFailedTitle": "Scan request failed",
+  "scanFailed": "Could not scan the library: {message}",
+  "@scanFailed": {
+    "description": "Library scan error with details.",
+    "placeholders": {
+      "message": {
+        "type": "String",
+        "example": "Connection refused"
+      }
+    }
+  },
+  "libraryStatusLoadFailedTitle": "Could not read library status",
+  "libraryStatusFailed": "Could not load library status: {message}",
+  "@libraryStatusFailed": {
+    "description": "Library status error with details.",
+    "placeholders": {
+      "message": {
+        "type": "String",
+        "example": "Connection refused"
+      }
+    }
+  },
+  "libraryStatusEndpointUnavailable": "This server does not provide the library status endpoint yet.",
+  "libraryScanEndpointUnavailable": "This server does not provide the library scan endpoint yet.",
+  "libraryScanAlreadyInProgress": "The server is already scanning the music library. Refresh the status and try again later.",
+  "scanResultTitle": "Latest scan result",
+  "scanResultTotalTracks": "Total tracks",
+  "scanResultReturnedTracks": "Returned tracks",
+  "scanResultTime": "Completed at",
+  "scrapeTitle": "Match metadata",
+  "scrapeTooltip": "Match metadata",
+  "scrapeProvider": "Provider: {provider}",
+  "@scrapeProvider": {
+    "description": "Metadata provider label.",
+    "placeholders": {
+      "provider": {
+        "type": "String",
+        "example": "MusicBrainz"
+      }
+    }
+  },
+  "scrapeConfidence": "{percent}% confidence",
+  "@scrapeConfidence": {
+    "description": "Metadata candidate confidence.",
+    "placeholders": {
+      "percent": {
+        "type": "int",
+        "example": "92"
+      }
+    }
+  },
+  "scrapeCandidatesCount": "{count} candidates",
+  "@scrapeCandidatesCount": {
+    "description": "Number of metadata candidates.",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "3"
+      }
+    }
+  },
+  "scrapeReviewDifferences": "Review the field differences and choose what to apply.",
+  "scrapeCurrentValue": "Current",
+  "scrapeCandidateValue": "Candidate",
+  "scrapeNoValue": "Not set",
+  "scrapeNoDifferences": "This candidate does not contain applicable fields.",
+  "scrapeFieldsSelected": "{count} fields selected",
+  "@scrapeFieldsSelected": {
+    "description": "Number of selected metadata fields.",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "4"
+      }
+    }
+  },
+  "applyCandidate": "Apply selected fields",
+  "applyingCandidate": "Applying...",
+  "scrapeApplySucceeded": "Applied {count} fields from {provider}.",
+  "@scrapeApplySucceeded": {
+    "description": "Successful metadata application message.",
+    "placeholders": {
+      "provider": {
+        "type": "String",
+        "example": "MusicBrainz"
+      },
+      "count": {
+        "type": "int",
+        "example": "4"
+      }
+    }
+  },
+  "scrapeApplyFailed": "Could not apply metadata: {message}",
+  "@scrapeApplyFailed": {
+    "description": "Metadata apply error with details.",
+    "placeholders": {
+      "message": {
+        "type": "String",
+        "example": "Connection refused"
+      }
+    }
+  },
+  "scrapeSelectAtLeastOneField": "Select at least one field to apply.",
+  "scrapeSearchFailedTitle": "Could not load metadata candidates",
+  "scrapeEndpointUnavailable": "This server does not provide the metadata scraping endpoints yet.",
+  "retry": "Retry",
+  "searchAgain": "Search again",
+  "noScrapeCandidatesTitle": "No suitable candidates",
+  "noScrapeCandidatesMessage": "Improve the file name or embedded tags, then search again.",
+  "scrapeFieldTitle": "Title",
+  "scrapeFieldArtist": "Artist",
+  "scrapeFieldAlbum": "Album",
+  "scrapeFieldAlbumArtist": "Album artist",
+  "scrapeFieldYear": "Year",
+  "scrapeFieldTrackNumber": "Track number",
+  "scrapeFieldDiscNumber": "Disc number",
+  "scrapeFieldGenre": "Genre",
+  "scrapeFieldArtwork": "Artwork",
+  "scrapeFieldLyrics": "Lyrics",
+  "all": "All",
+  "allTracks": "All tracks",
+  "downloadedTracks": "Downloaded",
+  "albums": "Albums",
+  "artists": "Artists",
+  "playlists": "Playlists",
+  "searchTracksArtistsAlbums": "Search tracks, artists, or albums",
+  "library": "Library",
+  "favorites": "Favorites",
+  "sortTracks": "Sort",
+  "sortByTitle": "Song title",
+  "sortByArtist": "Artist",
+  "sortByAlbum": "Album",
+  "sortAscending": "Ascending",
+  "sortDescending": "Descending",
+  "selectedTracks": "{count} selected",
+  "@selectedTracks": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "2"
+      }
+    }
+  },
+  "selectionSummary": "{total} tracks · {selected} selected",
+  "@selectionSummary": {
+    "placeholders": {
+      "total": {
+        "type": "int",
+        "example": "12"
+      },
+      "selected": {
+        "type": "int",
+        "example": "2"
+      }
+    }
+  },
+  "exitSelection": "Exit selection",
+  "selectAll": "Select all",
+  "downloadSelectedTracks": "Download selected tracks",
+  "download": "Download",
+  "noDownloadedTracks": "No downloaded tracks",
+  "noDownloadedTracksMessage": "Downloaded songs will appear here.",
+  "deleteDownloadedTrack": "Delete local download",
+  "deleteDownloadedTrackTitle": "Delete local download?",
+  "deleteDownloadedTrackPrompt": "Delete the local download for \"{title}\"? You can download it again later.",
+  "@deleteDownloadedTrackPrompt": {
+    "placeholders": {
+      "title": {
+        "type": "String",
+        "example": "Midnight City"
+      }
+    }
+  },
+  "deleteDownloadedTrackFailed": "Could not delete the local download.",
+  "moreOptions": "More options",
+  "playNow": "Play now",
+  "playNext": "Play next",
+  "addToQueue": "Add to queue",
+  "queue": "Queue",
+  "showQueue": "Show queue",
+  "hideQueue": "Hide queue",
+  "clearQueue": "Clear queue",
+  "removeFromQueue": "Remove from queue",
+  "emptyQueueMessage": "Your queue is waiting for a track.",
+  "yourLibrary": "Your library",
+  "favoritesFirst": "Favorites appear first",
+  "addToPlaylist": "Add to playlist",
+  "viewAlbum": "View album",
+  "viewArtist": "View artist",
+  "songInformation": "Song information",
+  "addFavorite": "Add to favorites",
+  "removeFavorite": "Remove from favorites",
+  "newPlaylist": "New playlist",
+  "playlistName": "Playlist name",
+  "create": "Create",
+  "noPlaylists": "No playlists yet.",
+  "noPlaylistTracks": "No playable tracks in this playlist.",
+  "noAlbums": "No albums available yet.",
+  "noArtists": "No artists available yet.",
+  "noTracksInAlbum": "No playable tracks in this album.",
+  "noTracksByArtist": "No playable tracks for this artist.",
+  "noMatchingTracks": "No matching tracks",
+  "noFavorites": "No favorites yet",
+  "noFavoritesMessage": "Tracks you favorite will appear here.",
+  "tryAnotherSearch": "Try another search or turn off the favorites filter.",
+  "playPlaylist": "Play playlist",
+  "playAlbum": "Play album",
+  "playArtist": "Play artist",
+  "removeFromPlaylist": "Remove from playlist",
+  "deletePlaylist": "Delete playlist",
+  "deletePlaylistPrompt": "Delete this playlist? Your songs will not be deleted.",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "unknownAlbum": "Unknown album",
+  "trackInfoTitle": "Title",
+  "trackInfoArtist": "Artist",
+  "trackInfoAlbum": "Album",
+  "trackInfoGenre": "Genre",
+  "trackInfoDuration": "Duration",
+  "trackInfoIdentifier": "Track ID",
+  "queuedNext": "Will play next.",
+  "addedToQueue": "Added to the queue.",
+  "alreadyPlaying": "This track is already playing.",
+  "alreadyInQueue": "This track is already in the queue.",
+  "playlistUpdateFailed": "Could not update the playlist or favorites.",
+  "trackAddedToPlaylist": "Added to playlist.",
+  "trackAlreadyInPlaylist": "This track is already in that playlist.",
+  "batchOperationCompleted": "Completed: {succeeded}/{total}",
+  "@batchOperationCompleted": {
+    "placeholders": {
+      "succeeded": {
+        "type": "int",
+        "example": "2"
+      },
+      "total": {
+        "type": "int",
+        "example": "3"
+      }
+    }
+  },
+  "batchDownloadQueued": "Added to download queue: {succeeded}/{total}",
+  "@batchDownloadQueued": {
+    "placeholders": {
+      "succeeded": {
+        "type": "int",
+        "example": "2"
+      },
+      "total": {
+        "type": "int",
+        "example": "3"
+      }
+    }
+  },
+  "batchSkipped": ", skipped {count}",
+  "@batchSkipped": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "batchFailed": ", failed {count}",
+  "@batchFailed": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "1"
+      }
+    }
+  },
+  "trackCount": "{count} {count, plural, =1{track} other{tracks}}",
+  "@trackCount": {
+    "description": "Number of tracks.",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "2"
+      }
+    }
+  },
+  "albumCount": "{count} {count, plural, =1{album} other{albums}}",
+  "@albumCount": {
+    "description": "Number of albums.",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "2"
+      }
+    }
+  },
+  "queueSummary": "{count} {count, plural, =1{track} other{tracks}} · drag to reorder",
+  "@queueSummary": {
+    "description": "Queue item count and reorder hint.",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "2"
+      }
+    }
+  },
+  "nowPlaying": "Now playing",
+  "yourSpace": "Your space",
+  "collections": "Collections",
+  "previous": "Previous",
+  "next": "Next",
+  "yourCollection": "Your collection",
+  "favoriteTracksCount": "{count} saved {count, plural, =1{track} other{tracks}}",
+  "@favoriteTracksCount": {
+    "description": "Number of favorite tracks.",
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "2"
+      }
+    }
+  },
+  "favoriteCollectionEmptyMessage": "Favorite a track to build your collection.",
+  "playCollection": "Play collection",
+  "playbackModeSequential": "Sequential playback",
+  "playbackModeRepeatAll": "Repeat queue",
+  "playbackModeRepeatOne": "Repeat current track",
+  "playbackModeShuffle": "Shuffle playback",
+  "sleepTimerTitle": "Sleep timer",
+  "sleepTimerTooltip": "Sleep timer",
+  "sleepTimerActiveTooltip": "Sleep timer active",
+  "sleepTimerRemaining": "{time} remaining",
+  "@sleepTimerRemaining": {
+    "description": "Remaining time before the sleep timer takes effect.",
+    "placeholders": {
+      "time": {
+        "type": "String",
+        "example": "30:00"
+      }
+    }
+  },
+  "sleepTimerDuration": "Duration",
+  "sleepTimerEndTime": "End time",
+  "sleepTimerDurationMinutes": "Duration in minutes",
+  "sleepTimerMinutes": "minutes",
+  "sleepTimerWhenFinished": "When the timer ends",
+  "sleepTimerPauseImmediately": "Pause immediately",
+  "sleepTimerPauseAfterCurrentTrack": "Pause after the current song",
+  "sleepTimerStart": "Start timer",
+  "sleepTimerCancel": "Cancel timer",
+  "sleepTimerInvalidDuration": "Enter a duration greater than zero.",
+  "sleepTimerSelectEndTime": "Select an end time.",
+  "sleepTimerWaitingForCurrentTrack": "Waiting for the current song to finish",
+  "navigationTracks": "Tracks",
+  "navigationDiscover": "Discover",
+  "navigationReport": "Listening report",
+  "discoverTitle": "Discover",
+  "discoverSubtitle": "Fresh picks shaped around your music library.",
+  "discoverSearchHint": "Search tracks, artists, or albums",
+  "guessYouLike": "Made for you",
+  "viewAll": "View all",
+  "discoverFallbackMessage": "Showing picks from your music library while discovery refreshes.",
+  "dailyRecommendations": "Daily 30",
+  "dailyRecommendationsSubtitle": "Thirty songs to soundtrack today.",
+  "listeningRanking": "Listening ranking",
+  "categoryPlaylists": "Category playlists",
+  "recentListeningRecommendations": "Based on recent listening",
+  "moreRecommendedSongs": "More songs for you",
+  "noRecommendations": "Your music library will appear here once songs are available.",
+  "noListeningRanking": "Start listening to build your ranking.",
+  "reportTitle": "Listening report",
+  "reportSubtitle": "Your {year} in sound",
+  "@reportSubtitle": {
+    "placeholders": {
+      "year": {
+        "type": "int",
+        "example": "2026"
+      }
+    }
+  },
+  "totalListeningTime": "Total listening time",
+  "listeningDuration": "{hours} h {minutes} min",
+  "@listeningDuration": {
+    "placeholders": {
+      "hours": {
+        "type": "int",
+        "example": "48"
+      },
+      "minutes": {
+        "type": "int",
+        "example": "30"
+      }
+    }
+  },
+  "listeningTimes": "Plays",
+  "listeningDays": "Listening days",
+  "songsListened": "Songs",
+  "albumsListened": "Albums",
+  "listeningHeatmap": "Listening heatmap",
+  "reportNoDataTitle": "Your report is waiting",
+  "reportNoDataMessage": "Play music to start building your listening story.",
+  "popularTracks": "Popular tracks",
+  "listeningPlayCount": "{count} plays",
+  "@listeningPlayCount": {
+    "placeholders": {
+      "count": {
+        "type": "int",
+        "example": "12"
+      }
+    }
+  },
+  "offlineDownloadsTooltip": "Download management",
+  "loginTitle": "Log in to LyraNest",
+  "createAdminTitle": "Create an administrator account",
+  "loginDescription": "Connect to your music server and enter your library.",
+  "createAdminDescription": "Your server is not initialized. Register the first administrator account.",
+  "authStatusCheckFailed": "Could not check server initialization status: {message}",
+  "@authStatusCheckFailed": {
+    "placeholders": {
+      "message": {
+        "type": "String",
+        "example": "Connection refused"
+      }
+    }
+  },
+  "serverAddressLabel": "Server address",
+  "internalServerAddressLabel": "Local network address",
+  "internalServerAddressHelper": "Example: http://192.168.0.107:8080",
+  "externalServerAddressLabel": "Public internet address (optional)",
+  "externalServerAddressHelper": "Example: https://music.example.com",
+  "serverAddressAutoSelectionHint": "LyraNest quickly probes both addresses and uses the one reachable on the current network.",
+  "usernameLabel": "Username",
+  "passwordLabel": "Password",
+  "showPassword": "Show password",
+  "hidePassword": "Hide password",
+  "login": "Log in",
+  "registerAdministrator": "Register administrator",
+  "loginConnectionHint": "Before submitting, LyraNest verifies the server connection and initialization status.",
+  "appInfoTitle": "App",
+  "aboutTitle": "About LyraNest Community",
+  "aboutSubtitle": "Version, acknowledgements, and app information",
+  "aboutDescription": "Your personal music space.",
+  "checkForUpdates": "Check for updates",
+  "checkForUpdatesDescription": "Query the latest official LyraNest release on GitHub.",
+  "alreadyLatestVersion": "You are already using the latest version.",
+  "updateAvailable": "Update available",
+  "updateAvailableDescription": "LyraNest {version} is available.",
+  "@updateAvailableDescription": {
+    "placeholders": {
+      "version": {
+        "type": "String",
+        "example": "0.1.9"
+      }
+    }
+  },
+  "updateCheckFailed": "Could not check for updates. Try again later.",
+  "openDownloadPage": "Open download page",
+  "projectAddress": "Project address",
+  "authorHomepage": "Author homepage",
+  "contactAuthor": "Contact author",
+  "couldNotOpenLink": "Could not open the link.",
+  "appVersion": "Version {version}",
+  "@appVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String",
+        "example": "0.1.8"
+      }
+    }
+  },
+  "supportAuthorTitle": "Support the author",
+  "supportAuthorDescription": "If LyraNest is helpful to you, scan the code below to show your support.",
+  "supportAuthorHint": "Thank you for supporting LyraNest.",
+  "exitApplicationTitle": "Exit LyraNest?",
+  "exitApplicationMessage": "Keep playing in the background or exit the app?",
+  "keepPlayingInBackground": "Keep playing",
+  "exitApplication": "Exit app"
+}

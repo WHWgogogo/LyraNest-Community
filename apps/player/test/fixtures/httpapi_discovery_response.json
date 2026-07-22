@@ -1,0 +1,95 @@
+{
+  "for_you": [
+    {
+      "id": "track-1",
+      "title": "First",
+      "artist": "Artist One",
+      "album": "Album One",
+      "album_artist": "Artist One",
+      "genres": ["Rock"],
+      "duration_ms": 3000,
+      "file_name": "first.mp3",
+      "extension": "mp3",
+      "size_bytes": 123,
+      "modified": "2026-07-20T08:00:00Z"
+    }
+  ],
+  "daily": [
+    {
+      "id": "track-2",
+      "title": "Second",
+      "artist": "Artist Two",
+      "album": "Album Two",
+      "genres": ["Jazz"],
+      "duration_ms": 3000,
+      "file_name": "second.mp3",
+      "extension": "mp3",
+      "size_bytes": 123,
+      "modified": "2026-07-20T08:00:00Z"
+    }
+  ],
+  "recent_recommendations": [
+    {
+      "id": "track-3",
+      "title": "Third",
+      "artist": "Artist Three",
+      "album": "Album Three",
+      "genres": ["Rock"],
+      "duration_ms": 3000,
+      "file_name": "third.mp3",
+      "extension": "mp3",
+      "size_bytes": 123,
+      "modified": "2026-07-20T08:00:00Z"
+    }
+  ],
+  "hot_tracks": [
+    {
+      "track": {
+        "id": "track-1",
+        "title": "First",
+        "artist": "Artist One",
+        "album": "Album One",
+        "genres": ["Rock"],
+        "duration_ms": 3000,
+        "file_name": "first.mp3",
+        "extension": "mp3",
+        "size_bytes": 123,
+        "modified": "2026-07-20T08:00:00Z"
+      },
+      "play_count": 2,
+      "listened_ms": 3000
+    }
+  ],
+  "categories": [
+    {
+      "name": "Rock",
+      "track_count": 2,
+      "tracks": [
+        {
+          "id": "track-1",
+          "title": "First",
+          "artist": "Artist One",
+          "album": "Album One",
+          "genres": ["Rock"],
+          "duration_ms": 3000,
+          "file_name": "first.mp3",
+          "extension": "mp3",
+          "size_bytes": 123,
+          "modified": "2026-07-20T08:00:00Z"
+        },
+        {
+          "id": "track-3",
+          "title": "Third",
+          "artist": "Artist Three",
+          "album": "Album Three",
+          "genres": ["Rock"],
+          "duration_ms": 3000,
+          "file_name": "third.mp3",
+          "extension": "mp3",
+          "size_bytes": 123,
+          "modified": "2026-07-20T08:00:00Z"
+        }
+      ]
+    }
+  ]
+}

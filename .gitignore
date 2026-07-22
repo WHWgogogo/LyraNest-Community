@@ -64,3 +64,6 @@ apps/player/android/key.properties
 *.iml
 .DS_Store
 Thumbs.db
+
+# Release artifacts are published through GitHub Releases.
+/dist/

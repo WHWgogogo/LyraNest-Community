@@ -7,7 +7,7 @@
 <p align="center">一套轻量、自托管、跨平台的个人音乐库服务。</p>
 
 <p align="center">
-  <a href="https://github.com/WHWgogogo/LyraNest-Community/releases/latest">下载社区版</a> ·
+  <a href="https://github.com/WHWgogogo/LyraNest-Community/tree/main/releases/1.0.0">下载社区版</a> ·
   <a href="https://github.com/WHWgogogo/LyraNest-Community/issues">提交问题</a> ·
   <a href="docs/deployment.md">部署文档</a> ·
   <a href="https://github.com/WHWgogogo/LyraNest/releases/latest">完整版发行版</a>
@@ -52,14 +52,15 @@
 
 ## 获取客户端与服务端
 
-请前往 [GitHub Releases](https://github.com/WHWgogogo/LyraNest-Community/releases/latest) 下载与系统架构匹配的发行文件：
+请前往 [仓库中的 `1.0.0` 发行目录](https://github.com/WHWgogogo/LyraNest-Community/tree/main/releases/1.0.0) 下载与系统架构匹配的发行文件：
 
 | 文件 | 说明 |
 | --- | --- |
-| `LyraNest-Community-Android-arm64-1.0.0.apk` | Android ARM64 客户端 |
-| `LyraNest-Community-Windows-x64-1.0.0.zip` | Windows x64 桌面客户端 |
-| `LyraNest-Community-Server-linux-amd64-1.0.0.zip` | Linux x64 服务端离线部署包 |
-| `SHA256SUMS.txt` | 发布文件 SHA-256 校验值 |
+| [`LyraNest-Community-Android-arm64-1.0.0.apk`](releases/1.0.0/LyraNest-Community-Android-arm64-1.0.0.apk) | Android ARM64 客户端 |
+| [`LyraNest-Community-Windows-x64-1.0.0.zip`](releases/1.0.0/LyraNest-Community-Windows-x64-1.0.0.zip) | Windows x64 桌面客户端 |
+| [`LyraNest-Community-Server-linux-amd64-1.0.0.zip`](releases/1.0.0/LyraNest-Community-Server-linux-amd64-1.0.0.zip) | Linux x64 服务端离线部署包 |
+| [`docker-compose.prebuilt.yml`](releases/1.0.0/docker-compose.prebuilt.yml) | 预构建服务端镜像的 Compose 示例 |
+| [`SHA256SUMS.txt`](releases/1.0.0/SHA256SUMS.txt) | 发布文件 SHA-256 校验值 |
 
 ## Docker Compose 部署
 

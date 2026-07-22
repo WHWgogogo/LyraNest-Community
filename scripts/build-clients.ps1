@@ -1,7 +1,9 @@
 [CmdletBinding()]
 param(
     [ValidateNotNullOrEmpty()]
-    [string]$DefaultServerUrl = 'http://192.168.0.107:8080'
+    [string]$DefaultServerUrl = 'http://192.168.0.107:8080',
+    [switch]$AndroidOnly,
+    [switch]$Clean
 )
 
 $ErrorActionPreference = 'Stop'
@@ -431,6 +433,8 @@ $buildWorkspace = $null
 $previousGradleUserHome = $env:GRADLE_USER_HOME
 $previousAndroidSdkRoot = $env:ANDROID_SDK_ROOT
 $previousAndroidHome = $env:ANDROID_HOME
+$previousTemp = $env:TEMP
+$previousTmp = $env:TMP
 $failed = $false
 
 try {
@@ -446,12 +450,18 @@ try {
     $flutterPath = Assert-Flutter
     [void](Assert-Jdk)
     $androidSdkRoot = Assert-AndroidSdk
-    [void](Assert-VisualStudio)
+    if (-not $AndroidOnly) {
+        [void](Assert-VisualStudio)
+    }
     $androidSigningMode = Get-AndroidReleaseSigningMode
 
     $androidCacheScript = Join-Path $repoRoot 'scripts\cache-media-kit.ps1'
     $windowsCacheScript = Join-Path $repoRoot 'scripts\cache-media-kit-windows.ps1'
-    foreach ($cacheScript in @($androidCacheScript, $windowsCacheScript)) {
+    $cacheScripts = @($androidCacheScript)
+    if (-not $AndroidOnly) {
+        $cacheScripts += $windowsCacheScript
+    }
+    foreach ($cacheScript in $cacheScripts) {
         if (-not (Test-Path -LiteralPath $cacheScript -PathType Leaf)) {
             throw "media_kit cache script was not found: $cacheScript"
         }
@@ -472,17 +482,32 @@ try {
     }
 
     $buildClientRoot = Join-Path $buildRepoRoot 'apps\player'
-    $gradleUserHome = Join-Path $cacheRepoRoot 'dist\build-cache\gradle-home'
+    $buildCacheRoot = Join-Path $cacheRepoRoot 'dist\build-cache'
+    $gradleUserHome = Join-Path $buildCacheRoot 'gradle-home'
+    $buildTempRoot = Join-Path $buildCacheRoot 'temp'
     New-Item -ItemType Directory -Path $gradleUserHome -Force | Out-Null
+    New-Item -ItemType Directory -Path $buildTempRoot -Force | Out-Null
     $env:GRADLE_USER_HOME = $gradleUserHome
+    $env:TEMP = $buildTempRoot
+    $env:TMP = $buildTempRoot
 
     $dartDefine = "--dart-define=DEFAULT_SERVER_URL=$DefaultServerUrl"
     Write-Step "DEFAULT_SERVER_URL=$DefaultServerUrl"
     Write-Step "GRADLE_USER_HOME=$gradleUserHome"
+    Write-Step "TEMP=$buildTempRoot"
 
-    Invoke-External -FilePath $flutterPath -Arguments @('clean') -WorkingDirectory $buildClientRoot
-    Initialize-WindowsMediaKitArchive -CacheRepositoryRoot $cacheRepoRoot -BuildClientRoot $buildClientRoot
-    Invoke-External -FilePath $flutterPath -Arguments @('build', 'windows', '--release', $dartDefine) -WorkingDirectory $buildClientRoot
+    if ($Clean) {
+        Write-Step 'Run full Flutter clean by request'
+        Invoke-External -FilePath $flutterPath -Arguments @('clean') -WorkingDirectory $buildClientRoot
+    }
+    else {
+        Write-Step 'Reuse existing Flutter and Gradle build caches'
+    }
+
+    if (-not $AndroidOnly) {
+        Initialize-WindowsMediaKitArchive -CacheRepositoryRoot $cacheRepoRoot -BuildClientRoot $buildClientRoot
+        Invoke-External -FilePath $flutterPath -Arguments @('build', 'windows', '--release', $dartDefine) -WorkingDirectory $buildClientRoot
+    }
     Invoke-External -FilePath $flutterPath -Arguments @('build', 'apk', '--release', '--target-platform=android-arm64', $dartDefine) -WorkingDirectory $buildClientRoot
 
     $apkVerificationScript = Join-Path $repoRoot 'scripts\verify-android-apk.ps1'
@@ -503,7 +528,13 @@ try {
     }
 
     Write-Step "Package delivery artifacts"
-    & $packageScript -RepositoryRoot $repoRoot -ArtifactRoot $buildRepoRoot -AndroidSigningMode $androidSigningMode
+    $packageArguments = @{
+        RepositoryRoot = $repoRoot
+        ArtifactRoot = $buildRepoRoot
+        AndroidSigningMode = $androidSigningMode
+        AndroidOnly = $AndroidOnly
+    }
+    & $packageScript @packageArguments
 }
 catch {
     $failed = $true
@@ -526,6 +557,8 @@ finally {
     $env:GRADLE_USER_HOME = $previousGradleUserHome
     $env:ANDROID_SDK_ROOT = $previousAndroidSdkRoot
     $env:ANDROID_HOME = $previousAndroidHome
+    $env:TEMP = $previousTemp
+    $env:TMP = $previousTmp
 
     if ($null -ne $buildWorkspace) {
         Write-Step "Clean ASCII build workspace: $($buildWorkspace.RootPath)"

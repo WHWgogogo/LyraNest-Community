@@ -7,7 +7,7 @@
 <p align="center">一套轻量、自托管、跨平台的个人音乐库服务。</p>
 
 <p align="center">
-  <a href="https://github.com/WHWgogogo/LyraNest-Community/tree/main/releases/1.0.0">下载社区版</a> ·
+  <a href="https://github.com/WHWgogogo/LyraNest-Community/tree/main/releases/1.0.1">下载社区版</a> ·
   <a href="https://github.com/WHWgogogo/LyraNest-Community/issues">提交问题</a> ·
   <a href="docs/deployment.md">部署文档</a> ·
   <a href="https://github.com/WHWgogogo/LyraNest/releases/latest">完整版发行版</a>
@@ -17,7 +17,7 @@
 
 将音乐文件保存在自己的服务器、NAS 或电脑中，即可通过 Web、Windows 和 Android 客户端浏览、搜索与播放音乐。
 
-当前版本：`1.0.0`
+当前版本：`1.0.1`
 
 ## 保留功能
 
@@ -29,6 +29,7 @@
 - 播放、暂停、上一首、下一首与播放列表管理
 - 顺序播放、列表循环、单曲循环、随机播放
 - 播放页基础歌词读取与显示
+- 歌曲下载、下载管理与已下载歌曲离线播放
 - 收藏和歌单数据跨 Web、Windows、Android 同步
 - Docker Compose 部署、数据备份、健康检查与升级指引
 
@@ -52,15 +53,15 @@
 
 ## 获取客户端与服务端
 
-请前往 [仓库中的 `1.0.0` 发行目录](https://github.com/WHWgogogo/LyraNest-Community/tree/main/releases/1.0.0) 下载与系统架构匹配的发行文件：
+请前往 [仓库中的 `1.0.1` 发行目录](https://github.com/WHWgogogo/LyraNest-Community/tree/main/releases/1.0.1) 下载与系统架构匹配的发行文件：
 
 | 文件 | 说明 |
 | --- | --- |
-| [`LyraNest-Community-Android-arm64-1.0.0.apk`](releases/1.0.0/LyraNest-Community-Android-arm64-1.0.0.apk) | Android ARM64 客户端 |
-| [`LyraNest-Community-Windows-x64-1.0.0.zip`](releases/1.0.0/LyraNest-Community-Windows-x64-1.0.0.zip) | Windows x64 桌面客户端 |
-| [`LyraNest-Community-Server-linux-amd64-1.0.0.zip`](releases/1.0.0/LyraNest-Community-Server-linux-amd64-1.0.0.zip) | Linux x64 服务端离线部署包 |
-| [`docker-compose.prebuilt.yml`](releases/1.0.0/docker-compose.prebuilt.yml) | 预构建服务端镜像的 Compose 示例 |
-| [`SHA256SUMS.txt`](releases/1.0.0/SHA256SUMS.txt) | 发布文件 SHA-256 校验值 |
+| [`LyraNest-Community-Android-arm64-1.0.1.apk`](releases/1.0.1/LyraNest-Community-Android-arm64-1.0.1.apk) | Android ARM64 客户端 |
+| [`LyraNest-Community-Windows-x64-1.0.1.zip`](releases/1.0.1/LyraNest-Community-Windows-x64-1.0.1.zip) | Windows x64 桌面客户端 |
+| [`LyraNest-Community-Server-linux-amd64-1.0.1.zip`](releases/1.0.1/LyraNest-Community-Server-linux-amd64-1.0.1.zip) | Linux x64 服务端离线部署包 |
+| [`docker-compose.prebuilt.yml`](releases/1.0.1/docker-compose.prebuilt.yml) | 预构建服务端镜像的 Compose 示例 |
+| [`SHA256SUMS.txt`](releases/1.0.1/SHA256SUMS.txt) | 发布文件 SHA-256 校验值 |
 
 ## Docker Compose 部署
 
@@ -136,6 +137,5 @@ docker compose exec lyranest-community-server /usr/local/bin/music-player-server
 - 发现页、每日推荐、听歌报告、热力图与推荐算法
 - 音乐元数据刮削
 - 桌面歌词悬浮窗
-- 离线下载、离线登录与下载管理
 
 如果你发现问题、希望参与改进，欢迎在 [Issues](https://github.com/WHWgogogo/LyraNest-Community/issues) 中反馈。

@@ -1,10 +1,10 @@
-﻿services:
+services:
   lyranest-community-server:
     build:
       # Community edition server source directory.
       context: "${SERVER_BUILD_CONTEXT:-./server}"
       dockerfile: "${SERVER_DOCKERFILE:-Dockerfile}"
-    image: lyranest-community-server:${SERVER_IMAGE_TAG:-1.0.0}
+    image: lyranest-community-server:${SERVER_IMAGE_TAG:-1.0.1}
     container_name: lyranest-community-server
     restart: unless-stopped
     mem_limit: "${SERVER_MEMORY_LIMIT:-256m}"

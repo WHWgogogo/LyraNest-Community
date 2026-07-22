@@ -19,7 +19,7 @@ import (
 	"music-player-server/internal/userdata"
 )
 
-const defaultMusicBrainzUserAgent = "LyraNest Community/1.0.0 (+https://github.com/WHWgogogo/LyraNest-Community)"
+const defaultMusicBrainzUserAgent = "LyraNest Community/1.0.1 (+https://github.com/WHWgogogo/LyraNest-Community)"
 
 func main() {
 	if len(os.Args) > 1 && os.Args[1] == "healthcheck" {

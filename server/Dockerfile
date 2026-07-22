@@ -12,7 +12,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o /out/music-player-server ./cmd/server
 FROM alpine:3.20
 
 LABEL org.opencontainers.image.title="LyraNest Community Server" \
-      org.opencontainers.image.version="1.0.0"
+      org.opencontainers.image.version="1.0.1"
 
 WORKDIR /app
 RUN apk add --no-cache ca-certificates tzdata \

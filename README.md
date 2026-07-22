@@ -66,7 +66,7 @@
 
 根目录还提供带中文注释的 [`docker-compose.yml`](docker-compose.yml)，可直接用于从本仓库构建并部署社区版服务端。
 
-## Docker Compose 部署
+## Docker 部署
 
 ### 1. 获取仓库并准备目录
 
@@ -80,7 +80,50 @@ mkdir -p music data
 
 ### 2. 按需修改配置
 
-根目录的 [`docker-compose.yml`](docker-compose.yml) 已包含注释。常用可调整项如下：
+根目录的 [`docker-compose.yml`](docker-compose.yml) 已包含中文注释，完整配置如下；可直接保存为同名文件后执行部署：
+
+```yaml
+services:
+  lyranest-community-server:
+    build:
+      # 社区版服务端源码目录。
+      context: "${SERVER_BUILD_CONTEXT:-./server}"
+      dockerfile: "${SERVER_DOCKERFILE:-Dockerfile}"
+    image: lyranest-community-server:${SERVER_IMAGE_TAG:-1.0.1}
+    container_name: lyranest-community-server
+    restart: unless-stopped
+    mem_limit: "${SERVER_MEMORY_LIMIT:-256m}"
+    mem_reservation: "${SERVER_MEMORY_RESERVATION:-128m}"
+    environment:
+      # 容器内部监听地址，通常无需修改。
+      SERVER_ADDR: ":8080"
+      # 容器内路径。请在下方 volumes 中修改主机路径。
+      MUSIC_LIBRARY_DIR: /music
+      MUSIC_DATA_DIR: /data
+      # 小型 NAS / 虚拟机部署时的 Go 运行时内存调优。
+      GOMEMLIMIT: "${GOMEMLIMIT:-192MiB}"
+      GOGC: "${GOGC:-100}"
+      LOG_LEVEL: "${LOG_LEVEL:-info}"
+      SHUTDOWN_TIMEOUT: "${SHUTDOWN_TIMEOUT:-10s}"
+      AUTH_SESSION_TTL: "${AUTH_SESSION_TTL:-24h}"
+    ports:
+      # 修改 SERVER_PORT 可映射其他主机端口，例如 18080:8080。
+      - "${SERVER_PORT:-8080}:8080"
+    volumes:
+      # 修改 MUSIC_LIBRARY_HOST_DIR 为主机上的音乐目录。
+      # LyraNest Community 只需读取音乐文件来播放和扫描元数据。
+      - "${MUSIC_LIBRARY_HOST_DIR:-./music}:/music:ro"
+      # DATA_DIR 保存用户、会话、收藏、歌单与扫描索引。
+      - "${DATA_DIR:-./data}:/data:rw"
+    healthcheck:
+      test: ["CMD", "/usr/local/bin/music-player-server", "healthcheck"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 60s
+```
+
+常用可调整项如下：
 
 | 配置项 | 默认值 | 用途 |
 | --- | --- | --- |

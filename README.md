@@ -191,3 +191,14 @@ docker compose exec lyranest-community-server /usr/local/bin/music-player-server
 - 桌面歌词悬浮窗
 
 如果你发现问题、希望参与改进，欢迎在 [Issues](https://github.com/WHWgogogo/LyraNest-Community/issues) 中反馈。
+
+---
+
+## 赞助支持
+
+如果您觉得 LyraNest 对您有所帮助，欢迎为爱发电，支持项目的持续维护与更新！
+
+<p align="center">
+  <img src="docs/images/sponsor-qrcode.jpg" alt="LyraNest 赞赏码" width="220" />
+</p>
+
